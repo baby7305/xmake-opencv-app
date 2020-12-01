@@ -1,11 +1,11 @@
-add_rules("mode.debug", "mode.release")
-
-add_packagedirs("pkg")
-
-target("xmake-opencv-app")
-    add_rules("qt.console")
-    add_files("src/*.cpp")
-    add_packages("opencv4d5d0")
+option("opencv4d5d0")
+    set_showmenu(true)
+    set_category("package")
+    add_links("opencv_world450")
+    add_linkdirs("C:\\opencv4d5d0\\build\\x64\\vc14\\lib")
+    add_linkdirs("C:\\opencv4d5d0\\build\\x64\\vc14\\bin")
+    add_includedirs("C:\\opencv4d5d0\\build\\include")
+    set_languages("cxx11")
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
